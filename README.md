@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Food Select App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- React Project to display food categories in a horizontal list
+- Clicking on a category will display the food items in a vertical list
+- Technologies used : Reactjs , SCSS , HTML , SCSS , Bootstrap
 
 ## Available Scripts
 
