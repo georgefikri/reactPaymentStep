@@ -1,0 +1,19 @@
+@import '../src/Styles/main.scss';
+
+body {
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  background-color: $main-bg-color;
+  height: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}

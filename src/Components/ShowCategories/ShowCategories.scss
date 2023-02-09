@@ -1,0 +1,190 @@
+@import '../../../src/Styles/main.scss';
+
+@mixin leftSpacing45 {
+  padding-left: 54px;
+}
+
+.meals__selector__wrapper {
+  @include bodyColumnsBackground;
+  position: relative;
+
+  .tabs-container {
+    display: flex;
+    border-bottom: 1px solid $grey-color;
+    height: 98px;
+    overflow: hidden;
+    @include leftSpacing45;
+    align-items: center;
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 20px;
+      height: 48px;
+      min-width: 143px;
+      border-radius: 24px;
+      box-sizing: border-box;
+      border: 1px solid $purple-main-color;
+      margin-right: 12px;
+      font: normal normal medium 14px/16px Work Sans;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $purple-main-color;
+    }
+
+    .tab.active {
+      background-color: $purple-main-color;
+      color: $white-bg-color;
+    }
+  }
+
+  .previous,
+  .next {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: $common-bg-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    z-index: 1;
+    top: 7%;
+    box-shadow: 0px 3px 6px $grey-shadow;
+  }
+
+  @mixin arrow {
+    width: 22px;
+    height: 20px;
+  }
+
+  .previous {
+    left: 10px;
+    img {
+      @include arrow;
+      transform: rotate(180deg);
+    }
+  }
+
+  .next {
+    right: 20px;
+    img {
+      @include arrow;
+    }
+  }
+}
+
+.details-container {
+  overflow-y: scroll;
+  height: 600px;
+  text-align: left;
+  @include leftSpacing45;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.detail,
+.restaurants__info__wrapper__cart {
+  display: flex;
+  flex-wrap: wrap;
+  .detail__header {
+    margin: 53px 0 14px 0;
+    display: flex;
+    width: 100%;
+
+    h2 {
+      font: normal normal bold 20px/25px Work Sans;
+    }
+    span {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: $black-lighter-color;
+      color: $white-bg-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: normal normal normal 16px/19px Work Sans;
+      margin-left: 24px;
+    }
+  }
+  .detail__description {
+    display: flex;
+    flex: 1 0 100%;
+    margin-bottom: 14px;
+    border-bottom: 1px solid $light-grey-main-color;
+    padding-bottom: 12px;
+
+    img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 20%;
+    }
+  }
+  .detail__description__left {
+    display: flex;
+    margin-right: 12px;
+  }
+
+  .detail__description__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .detail__description__title {
+      font: normal normal 600 18px/21px Work Sans;
+      color: $black-lighter-color;
+    }
+    .detail__description__lastrow {
+      display: flex;
+      margin-top: 9px;
+
+      .detail__description__price {
+        font: normal normal 600 14px/16px Work Sans;
+        color: $black-color;
+        line-height: 1.4;
+      }
+
+      .detail__description__rating {
+        @include ratingStarsLabel;
+
+        .detail__description__rating__star {
+          @include ratingStarsAlignment;
+          path {
+            fill: $green-color;
+          }
+        }
+      }
+
+      .detail__description__brief {
+        font: normal 14px Work Sans;
+        color: $dark-grey;
+        margin-left: 34px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 400px;
+      }
+    }
+  }
+  .detail__description__view__select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 12px;
+
+    object {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

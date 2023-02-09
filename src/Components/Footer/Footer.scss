@@ -1,0 +1,40 @@
+@import '../../../src/Styles/main.scss';
+
+.footer {
+  background-color: $white-bg-color;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  top: -10px;
+
+  .footer__wrapper {
+    @include mainWidth;
+    @include flexCenter;
+    justify-content: flex-end;
+    height: 96px;
+    margin: 0 auto;
+
+    button {
+      width: 407px;
+      height: 56px;
+      background-color: $purple-main-color;
+      border: 0;
+      border-radius: 28px;
+      cursor: pointer;
+
+      label {
+        color: $white-bg-color;
+        font: 18px Work Sans;
+        text-transform: capitalize;
+      }
+      img {
+        width: 40px;
+        height: 19px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(59deg) brightness(104%)
+          contrast(107%);
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}

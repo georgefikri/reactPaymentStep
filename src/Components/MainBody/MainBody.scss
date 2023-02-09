@@ -1,0 +1,19 @@
+@import '../../../src/Styles/main.scss';
+
+.main__body__wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 57px auto 0 auto;
+  @include mainWidth;
+  position: relative;
+  z-index: 1;
+
+  .meals__selector__wrapper {
+    width: 70%;
+  }
+
+  .restaurants__info__wrapper {
+    width: 36%;
+    margin-left: 30px;
+  }
+}

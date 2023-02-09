@@ -1,0 +1,146 @@
+@import '../../../src/Styles/main.scss';
+
+.restaurants__info__wrapper {
+  @include bodyColumnsBackground;
+  height: fit-content;
+
+  .restaurants__info__wrapper__info {
+    .restaurants__info__wrapper__info__image {
+      height: 179px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px 12px 0 0;
+        object-fit: cover;
+      }
+    }
+    .restaurants__info__wrapper__info__details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $light-grey-main-color;
+      .restaurants__info__wrapper__info__details__name {
+        margin: 19px 0 13px;
+        display: flex;
+
+        h3 {
+          font: normal normal bold 18px/21px Work Sans;
+        }
+        .detail__description__rating__star {
+          @include ratingStarsAlignment;
+          path {
+            fill: $green-color;
+          }
+        }
+        .detail__description__rating {
+          @include ratingStarsLabel;
+          margin-left: 14px;
+        }
+      }
+
+      .restaurants__info__wrapper__info__details__address {
+        display: flex;
+        .restaurants__address__details {
+          font: normal normal 14px Work Sans;
+          color: $black-color;
+          @include flexCenter;
+        }
+
+        button {
+          width: 36px;
+          height: 36px;
+          border-radius: 30%;
+          border: 0;
+          background-color: $black-color;
+          cursor: pointer;
+          margin-left: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(59deg)
+              brightness(104%) contrast(107%);
+          }
+          @include flexCenter;
+        }
+      }
+
+      .restaurants__info__wrapper__info__details__type {
+        width: 169px;
+        height: 35px;
+        border-radius: 6px;
+        background-color: $black-lighter-color;
+        color: $white-bg-color;
+        @include flexCenter;
+        margin-top: 5px;
+        p {
+          font: normal 14px Work Sans;
+        }
+      }
+    }
+  }
+
+  .restaurants__info__wrapper__cart {
+    .restaurants__info__wrapper__cart__items {
+      width: 100%;
+
+      .detail__description {
+        padding: 9px 23px 9px 18px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .detail__description__title {
+          font: normal normal 600 18px Work Sans;
+          color: $purple-main-color;
+        }
+
+        .detail__description__price {
+          font: normal normal 600 14px Work Sans;
+        }
+
+        .detail__description__action {
+          @include flexCenter;
+          margin-left: auto;
+
+          .detail__description__view__select {
+            border: 0;
+            width: 20px !important;
+            height: 24px;
+            background-color: $white-bg-color;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .restaurants__info__wrapper__total {
+    display: flex;
+    height: 60px;
+    align-items: center;
+
+    & > p:first-child {
+      padding: 0 13px 0 18px;
+      font: normal 14px Work Sans;
+      color: $dark-grey;
+    }
+
+    & > p:last-child {
+      font: normal normal bold 18px/18px Work Sans;
+      color: $black-color;
+    }
+  }
+
+  .box {
+    --mask: radial-gradient(33.54px at 50% calc(100% - 45px), #000 99%, #0000 101%)
+        calc(50% - 60px) 0/120px 100%,
+      radial-gradient(33.54px at 50% calc(100% + 15px), #0000 99%, #000 101%) 50%
+        calc(100% - 30px) / 120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+}

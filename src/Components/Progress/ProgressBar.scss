@@ -1,0 +1,15 @@
+@import '../../../src/Styles/main.scss';
+
+.progress__bar__wrapper {
+  .progress-bar,
+  .progress {
+    height: 6px;
+  }
+  .progress {
+    background-color: $common-bg-color;
+  }
+  .progress-bar {
+    background-color: $purple-main-color;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,55 @@
+// main fonts
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+// variables
+$main-bg-color: #f6f9f9;
+$common-bg-color: #f3f3f3;
+$white-bg-color: #fff;
+$grey-color: #d3dbda;
+$purple-main-color: #410deb;
+$light-grey-main-color: #e0e8e4;
+$black-color: #000;
+$grey-shadow: #00000029;
+$black-lighter-color: #020a05;
+$green-color: #79e003;
+$dark-grey: #2f3333a6;
+
+// css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+
+// common mixins
+
+@mixin mainWidth {
+  width: 1200px;
+}
+
+@mixin bodyColumnsBackground {
+  border: 1px solid $grey-color;
+  border-radius: 12px;
+  background-color: $white-bg-color;
+}
+
+@mixin ratingStarsLabel {
+  font: normal normal 600 14px/19px Work Sans;
+  color: $green-color;
+  margin-left: 20px;
+}
+
+@mixin ratingStarsAlignment {
+  margin-left: 2px;
+  position: relative;
+  top: -2px;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
